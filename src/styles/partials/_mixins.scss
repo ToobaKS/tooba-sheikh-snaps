@@ -1,0 +1,30 @@
+@use "./variables" as *;
+@use "./fonts" as *;
+
+//Media Queries Mixin
+
+@mixin tablet {
+  @media (min-width: $tablet-breakpoint) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop-breakpoint) {
+    @content;
+  }
+}
+
+//Other mixins
+@mixin display-flex($flexdirection, $justify, $align) {
+  display: flex;
+  flex-direction: $flexdirection;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin font($size, $lineheight, $weight) {
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $lineheight;
+}
