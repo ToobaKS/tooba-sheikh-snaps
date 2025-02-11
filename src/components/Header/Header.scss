@@ -1,0 +1,5 @@
+@use "../../styles/partials/mixins" as *;
+
+.header{
+    @include display-flex(row, space-between, center);
+}
