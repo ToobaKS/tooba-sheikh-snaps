@@ -21,10 +21,10 @@ function Footer() {
       </div>
       <div className="footer__bottom">
         <div className="footer__social">
-          <img src={facebook} alt="facebook" />
-          <img src={x} alt="x"/>
-          <img src={instagram} alt="instagram" />
-          <img src={pinterest} alt="pinterest" />
+          <a href="https://www.facebook.com/"><img src={facebook} alt="facebook" /></a>
+          <a href="https://x.com/?lang=en&mx=2"><img src={x} alt="x"/></a>
+          <a href="https://www.instagram.com/"><img src={instagram} alt="instagram" /></a>
+          <a href="https://www.pinterest.com/"><img src={pinterest} alt="pinterest" /></a>
         </div>
         <div className="footer__copyright">
             <p className="footer__info">&copy; 2024 Snaps</p>
