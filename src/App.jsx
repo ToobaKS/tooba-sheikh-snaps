@@ -31,16 +31,20 @@ function App() {
 
   const [selectedFilter, setSelectedFilter] = useState(null);
 
-  const filteredPhotos = photos.filter((photo) =>
-    photo.tags.some((tag) => selectedFilter.includes(tag))
-  );
+  const filteredPhotos = photos.filter((photo) => {
+    if (!selectedFilter) {
+      return true;
+    } else {
+      return photo.tags.some((tag) => selectedFilter.includes(tag));
+    }
+  });
 
   return (
     <>
       <Header openDrawer={openDrawer} />
-      {isOpen && <FilterContainer setSelectedFilter={setSelectedFilter}/>}
+      {isOpen && <FilterContainer setSelectedFilter={setSelectedFilter} />}
       <Hero />
-      <PhotoCardList photos={photos} />
+      <PhotoCardList photos={filteredPhotos} />
       <Footer />
     </>
   );
