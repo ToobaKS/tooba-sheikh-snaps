@@ -21,16 +21,36 @@ function Footer() {
       </div>
       <div className="footer__bottom">
         <div className="footer__social">
-          <a href="https://www.facebook.com/"><img src={facebook} alt="facebook" /></a>
-          <a href="https://x.com/?lang=en&mx=2"><img src={x} alt="x"/></a>
-          <a href="https://www.instagram.com/"><img src={instagram} alt="instagram" /></a>
-          <a href="https://www.pinterest.com/"><img src={pinterest} alt="pinterest" /></a>
+          <a className="footer__social-link" href="https://www.facebook.com/">
+            <img
+              className="footer__social-icon"
+              src={facebook}
+              alt="facebook"
+            />
+          </a>
+          <a className="footer__social-link" href="https://x.com/?lang=en&mx=2">
+            <img className="footer__social-icon" src={x} alt="x" />
+          </a>
+          <a className="footer__social-link" href="https://www.instagram.com/">
+            <img
+              className="footer__social-icon"
+              src={instagram}
+              alt="instagram"
+            />
+          </a>
+          <a className="footer__social-link" href="https://www.pinterest.com/">
+            <img
+              className="footer__social-icon"
+              src={pinterest}
+              alt="pinterest"
+            />
+          </a>
         </div>
         <div className="footer__copyright">
-            <p className="footer__info">&copy; 2024 Snaps</p>
-            <p className="footer__info">Terms</p>
-            <p className="footer__info">Privacy</p>
-            <p className="footer__info">Cookies</p>
+          <p className="footer__info">&copy; 2024 Snaps</p>
+          <p className="footer__info">Terms</p>
+          <p className="footer__info">Privacy</p>
+          <p className="footer__info">Cookies</p>
         </div>
       </div>
     </section>

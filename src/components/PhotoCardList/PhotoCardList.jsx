@@ -1,8 +1,8 @@
 import "./PhotoCardList.scss";
-import photos from "../../data/photos.json";
+
 import PhotoCard from "../PhotoCard/PhotoCard";
 
-function PhotoCardList() {
+function PhotoCardList({photos}) {
   return (
     <section className="photos">
       {photos.map((photo) => {
