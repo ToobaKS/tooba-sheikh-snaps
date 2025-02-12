@@ -7,21 +7,6 @@ import PhotoCardList from "./components/PhotoCardList/PhotoCardList";
 import Footer from "./components/Footer/Footer";
 import photos from "./data/photos.json";
 
-function FilterButton() {
-  return (
-    <div>
-      <button onClick={() => setIsOpen(!isOpen)}>Click Filters</button>
-      {isOpen && (
-        <ul>
-          {tags.map((tag, index) => (
-            <li key={index}>{tag}</li>
-          ))}
-        </ul>
-      )}
-    </div>
-  );
-}
-
 function App() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -31,9 +16,19 @@ function App() {
 
   const [selectedFilter, setSelectedFilter] = useState(null);
 
+  const filterPhotos = (tag) => {
+    setSelectedFilter(function (prevFilter) {
+      if (prevFilter === tag) {
+        return null; // If the same filter is clicked again, remove it
+      } else {
+        return tag; // Otherwise, set the new filter
+      }
+    });
+  };
+
   const filteredPhotos = photos.filter((photo) => {
     if (!selectedFilter) {
-      return true;
+      return photos;
     } else {
       return photo.tags.some((tag) => selectedFilter.includes(tag));
     }
@@ -42,7 +37,7 @@ function App() {
   return (
     <>
       <Header openDrawer={openDrawer} />
-      {isOpen && <FilterContainer setSelectedFilter={setSelectedFilter} />}
+      {isOpen && <FilterContainer filterPhotos={filterPhotos} />}
       <Hero />
       <PhotoCardList photos={filteredPhotos} />
       <Footer />

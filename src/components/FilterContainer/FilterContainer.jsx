@@ -1,10 +1,10 @@
 import "./FilterContainer.scss";
 import Filters from "../Filters/Filters";
 
-function FilterContainer({setSelectedFilter}){
+function FilterContainer({filterPhotos}){
     return(
         <section>
-            <Filters setSelectedFilter={setSelectedFilter}/>
+            <Filters filterPhotos={filterPhotos} />
         </section>
     );
 }

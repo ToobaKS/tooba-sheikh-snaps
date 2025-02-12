@@ -1,15 +1,12 @@
 import tags from "../../data/tags.json";
 import "./Filters.scss";
 
-function Filters({setSelectedFilter}) {
+function Filters({ filterPhotos }) {
   return (
     <section className="filters">
       {tags.map((tag) => {
         return (
-          <button
-            className="filters__button"
-            onClick={() => setSelectedFilter(tag)}
-          >
+          <button className="filters__button" onClick={() => filterPhotos(tag)}>
             {tag}
           </button>
         );
