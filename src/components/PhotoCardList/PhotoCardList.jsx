@@ -12,6 +12,7 @@ function PhotoCardList() {
             url={photo.photo}
             alt={photo.photoDescription}
             photographer={photo.photographer}
+            tags={photo.tags}
           />
         );
       })}
