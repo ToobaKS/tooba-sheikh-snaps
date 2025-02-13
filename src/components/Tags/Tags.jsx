@@ -1,11 +1,15 @@
 import "./Tags.scss";
 
-function Tags({ handleFilterPhotos, tags}) {
+function Tags({ handleFilterPhotos = () => {}, tags = [] }) {
   return (
-    <section className="filters">
+    <section className="tags">
       {tags.map((tag, index) => {
         return (
-          <button key={index} className="filters__button" onClick={() => handleFilterPhotos(tag)}>
+          <button
+            key={index}
+            className="tags__button"
+            onClick={() => handleFilterPhotos(tag)}
+          >
             {tag}
           </button>
         );
