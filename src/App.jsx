@@ -9,7 +9,7 @@ import Footer from "./components/Footer/Footer";
 function App() {
   
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedFilter, setSelectedFilter] = useState(null);
+  const [selectedTag, setSelectedTag] = useState(null);
 
   const toggleFilterContainer = () => {
     setIsOpen(!isOpen);
@@ -17,7 +17,7 @@ function App() {
 
  
   const handleFilterPhotos = (tag) => {
-    setSelectedFilter(function (prevFilter) {
+    setSelectedTag(function (prevFilter) {
       if (prevFilter === tag) {
         return null; // If the same filter is clicked again, remove it
       } else {
@@ -29,9 +29,9 @@ function App() {
   return (
     <>
       <Header toggleFilterContainer={toggleFilterContainer} />
-      {isOpen && <FilterContainer handleFilterPhotos={handleFilterPhotos} />}
+      {isOpen && <FilterContainer handleFilterPhotos={handleFilterPhotos} selectedTag={selectedTag} />}
       <Hero />
-      <PhotoCardList selectedFilter={selectedFilter} />
+      <PhotoCardList selectedTag={selectedTag} />
       <Footer />
     </>
   );

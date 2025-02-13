@@ -2,13 +2,13 @@ import "./PhotoCardList.scss";
 import photos from "../../data/photos.json";
 import PhotoCard from "../PhotoCard/PhotoCard";
 
-function PhotoCardList({selectedFilter}) {
+function PhotoCardList({selectedTag}) {
   
   const filteredPhotos = photos.filter((photo) => {
-    if (!selectedFilter) {
+    if (!selectedTag) {
       return photos;
     } else {
-      return photo.tags.some((tag) => selectedFilter.includes(tag));
+      return photo.tags.some((tag) => selectedTag.includes(tag));
     }
   });
   
