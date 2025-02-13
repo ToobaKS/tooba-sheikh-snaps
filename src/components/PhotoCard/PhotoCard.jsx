@@ -7,8 +7,8 @@ function PhotoCard({ url, alt, photographer, tags }) {
       <h2 className="photos__photographer">{photographer}</h2>
 
       <ul className="photos__tags">
-        {tags.map((tag) => {
-          return <li className="photos__tag">{tag}</li>;
+        {tags.map((tag, index) => {
+          return <li key={index} className="photos__tag">{tag}</li>;
         })}
       </ul>
     </div>

@@ -1,10 +1,10 @@
 import "./Header.scss";
 
-function Header({ openDrawer }) {
+function Header({ toggleFilterContainer }) {
   return (
     <header className="header">
       <h1 className="header__heading">Snaps</h1>
-      <button onClick={openDrawer} className="header__filter">Filter</button>
+      <button onClick={toggleFilterContainer} className="header__filter">Filter</button>
     </header>
   );
 }

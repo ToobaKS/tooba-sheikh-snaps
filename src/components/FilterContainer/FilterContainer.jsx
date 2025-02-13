@@ -1,10 +1,11 @@
+import tags from "../../data/tags.json";
 import "./FilterContainer.scss";
-import Filters from "../Filters/Filters";
+import Tags from "../Tags/Tags";
 
-function FilterContainer({filterPhotos}){
+function FilterContainer({handleFilterPhotos}){
     return(
         <section>
-            <Filters filterPhotos={filterPhotos} />
+            <Tags handleFilterPhotos={handleFilterPhotos} tags={tags} />
         </section>
     );
 }

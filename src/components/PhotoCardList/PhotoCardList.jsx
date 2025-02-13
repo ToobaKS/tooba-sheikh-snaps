@@ -1,11 +1,20 @@
 import "./PhotoCardList.scss";
-
+import photos from "../../data/photos.json";
 import PhotoCard from "../PhotoCard/PhotoCard";
 
-function PhotoCardList({photos}) {
+function PhotoCardList({selectedFilter}) {
+  
+  const filteredPhotos = photos.filter((photo) => {
+    if (!selectedFilter) {
+      return photos;
+    } else {
+      return photo.tags.some((tag) => selectedFilter.includes(tag));
+    }
+  });
+  
   return (
     <section className="photos">
-      {photos.map((photo) => {
+      {filteredPhotos.map((photo) => {
         return (
           <PhotoCard
             key={photo.id}

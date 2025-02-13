@@ -5,18 +5,18 @@ import FilterContainer from "./components/FilterContainer/FilterContainer";
 import Hero from "./components/Hero/Hero";
 import PhotoCardList from "./components/PhotoCardList/PhotoCardList";
 import Footer from "./components/Footer/Footer";
-import photos from "./data/photos.json";
 
 function App() {
+  
   const [isOpen, setIsOpen] = useState(false);
+  const [selectedFilter, setSelectedFilter] = useState(null);
 
-  const openDrawer = () => {
+  const toggleFilterContainer = () => {
     setIsOpen(!isOpen);
   };
 
-  const [selectedFilter, setSelectedFilter] = useState(null);
-
-  const filterPhotos = (tag) => {
+ 
+  const handleFilterPhotos = (tag) => {
     setSelectedFilter(function (prevFilter) {
       if (prevFilter === tag) {
         return null; // If the same filter is clicked again, remove it
@@ -26,20 +26,12 @@ function App() {
     });
   };
 
-  const filteredPhotos = photos.filter((photo) => {
-    if (!selectedFilter) {
-      return photos;
-    } else {
-      return photo.tags.some((tag) => selectedFilter.includes(tag));
-    }
-  });
-
   return (
     <>
-      <Header openDrawer={openDrawer} />
-      {isOpen && <FilterContainer filterPhotos={filterPhotos} />}
+      <Header toggleFilterContainer={toggleFilterContainer} />
+      {isOpen && <FilterContainer handleFilterPhotos={handleFilterPhotos} />}
       <Hero />
-      <PhotoCardList photos={filteredPhotos} />
+      <PhotoCardList selectedFilter={selectedFilter} />
       <Footer />
     </>
   );
