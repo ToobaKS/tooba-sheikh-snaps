@@ -1,0 +1,19 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.hero {
+  background-color: $secondary-color-sage;
+
+  &__heading {
+    font-family: "Newsreader";
+    @include font(32px, 38px, 300);
+
+    &--italics {
+      font-style: italic;
+    }
+  }
+  &__subheading {
+    font-family: "Outfit";
+    @include font(12px, 15px, 300);
+  }
+}

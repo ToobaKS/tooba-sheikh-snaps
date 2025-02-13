@@ -8,7 +8,7 @@ function PhotoCard({ url, alt, photographer, tags }) {
       <h2 className="photos__photographer">{photographer}</h2>
 
       <div className="photos__tags">
-        <Tags tags={tags} />
+        <Tags tags={tags} isClickable={false}/>
       </div>
     </div>
   );

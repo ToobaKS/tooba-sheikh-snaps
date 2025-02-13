@@ -1,20 +1,33 @@
-// @font-face {
-//     font-family: "Nunito Sans";
-//     src: url("../../assets/fonts/NunitoSans-Bold.woff") format("truetype"),
-//       url("../../assets/fonts/Alternative files/NunitoSans-Bold.woff2");
-//     font-weight: 700;
-//   }
-  
-//   @font-face {
-//     font-family: "Nunito Sans";
-//     src: url("../../assets/fonts/NunitoSans-Medium.woff") format("truetype"),
-//       url("../../assets/fonts/Alternative files/NunitoSans-Medium.woff2");
-//     font-weight: 500;
-//   }
-  
-//   @font-face {
-//     font-family: "Nunito Sans";
-//     src: url("../../assets/fonts/NunitoSans-Regular.woff") format("truetype"),
-//       url("../../assets/fonts/Alternative files/NunitoSans-Regular.woff2");
-//     font-weight: 400;
-//   }
+@font-face {
+  font-family: "Newsreader";
+  src: url("../../assets/fonts/Newsreader-Regular.woff") format("truetype"),
+    url("../../assets/fonts/alternative/Newsreader-Regular.woff2");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Newsreader";
+  src: url("../../assets/fonts/Newsreader-Light.woff") format("truetype"),
+    url("../../assets/fonts/alternative/Newsreader-Light.woff2");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Newsreader";
+  src: url("../../assets/fonts/Newsreader-LightItalic.woff") format("truetype"), url("../../assets/fonts/alternative/Newsreader-LightItalic.woff2");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("../../assets/fonts/Outfit-Medium.woff") format("truetype"), url("../../assets/fonts/alternative/Outfit-Medium.woff2");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("../../assets/fonts/Outfit-Light.woff") format("truetype"), url("../../assets/fonts/alternative/Outfit-Light.woff2");
+  font-weight: 300;
+}
+
