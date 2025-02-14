@@ -1,0 +1,32 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/fonts" as *;
+
+.tag {
+    margin: 4px;
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: 1px solid $secondary-color-sea-green;
+  background-color: $secondary-color-white;
+  color: $primary-color-black;
+  font-family: "Outfit";
+  @include font(10px, 12px, 500);
+
+  &__clickable {
+    border: 1.25px solid $primary-color-forest-green;
+    color: $primary-color-forest-green;
+    @include font(12px, 15px, 500);
+
+    &:hover {
+      border: 1px solid $primary-color-forest-green;
+      background-color: $primary-color-forest-green;
+      color: $secondary-color-white;
+    }
+  }
+
+  &__selected {
+    border: 1px solid $primary-color-forest-green;
+    background-color: $primary-color-forest-green;
+    color: $secondary-color-white;
+  }
+}

@@ -8,12 +8,12 @@
     border-radius: 8px;
     display: flex;
     flex-direction: column;
-  
+    overflow: hidden;
+
     &__content {
       position: relative;
       display: flex;
-      border-top-left-radius: 8px;
-      border-top-right-radius: 8px;
+    
       overflow: hidden;
     }
   
@@ -31,7 +31,6 @@
     }
   
     &__tags {
-      display: flex;
-      gap: 0.1rem;
+      display: flex;;
     }
   }

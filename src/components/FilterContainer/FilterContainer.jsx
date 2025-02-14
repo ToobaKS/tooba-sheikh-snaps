@@ -4,7 +4,7 @@ import Tags from "../Tags/Tags";
 
 function FilterContainer({handleFilterPhotos, selectedTag}){
     return(
-        <section>
+        <section className="container">
             <Tags handleFilterPhotos={handleFilterPhotos} tags={tags} isClickable={true} selectedTag={selectedTag} />
         </section>
     );
