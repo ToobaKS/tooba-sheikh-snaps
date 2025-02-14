@@ -3,12 +3,14 @@ import Tags from "../Tags/Tags";
 
 function PhotoCard({ url, alt, photographer, tags }) {
   return (
-    <div className="photos__photo">
-      <img className="photos__image" src={url} alt={alt} />
-      <h2 className="photos__photographer">{photographer}</h2>
+    <div className="photo">
+      <div className="photo__content">
+        <img className="photo__image" src={url} alt={alt} />
+        <h2 className="photo__photographer">{photographer}</h2>
+      </div>
 
-      <div className="photos__tags">
-        <Tags tags={tags} isClickable={false}/>
+      <div className="photo__tags">
+        <Tags tags={tags} isClickable={false} />
       </div>
     </div>
   );

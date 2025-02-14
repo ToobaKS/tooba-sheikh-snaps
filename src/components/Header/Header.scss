@@ -9,6 +9,7 @@
   position: sticky;
   top: 0px;
   z-index: 1000;
+  
   &__wordmark {
     font-family: "Newsreader";
     @include font(32px, 32px, 400);
@@ -36,4 +37,8 @@
   &__filter-image {
     padding-left: 8px;
   }
+}
+
+svg{
+  color: $primary-color-forest-green;
 }
