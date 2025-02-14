@@ -28,7 +28,7 @@ function App() {
 
   return (
     <>
-      <Header toggleFilterContainer={toggleFilterContainer} />
+      <Header toggleFilterContainer={toggleFilterContainer} isOpen={isOpen} />
       {isOpen && <FilterContainer handleFilterPhotos={handleFilterPhotos} selectedTag={selectedTag} />}
       <Hero />
       <PhotoCardList selectedTag={selectedTag} />

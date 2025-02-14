@@ -6,7 +6,9 @@
   padding: 24px 16px;
   background-color: $secondary-color-sage;
   @include display-flex(row, space-between, start);
-
+  position: sticky;
+  top: 0px;
+  z-index: 1000;
   &__wordmark {
     font-family: "Newsreader";
     @include font(32px, 32px, 400);
