@@ -1,18 +1,21 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
+@use "../../styles/partials/fonts" as *;
 
 .hero {
   background-color: $secondary-color-sage;
+  padding: 16px;
 
   &__heading {
     font-family: "Newsreader";
-    @include font(32px, 38px, 300);
+    @include font(26px, 38px, 300);
 
     &--italics {
       font-style: italic;
     }
   }
   &__subheading {
+    padding: 16px 0px;
     font-family: "Outfit";
     @include font(12px, 15px, 300);
   }

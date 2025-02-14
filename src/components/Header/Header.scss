@@ -1,7 +1,22 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
+@use "../../styles/partials/fonts" as *;
 
 .header {
+  padding: 24px 16px;
   background-color: $secondary-color-sage;
   @include display-flex(row, space-between, center);
+
+  &__wordmark {
+    font-family: "Newsreader";
+    @include font(32px, 32px, 400);
+  }
+
+  &__filter{
+
+  }
+
+  &__filter-image{
+    
+  }
 }

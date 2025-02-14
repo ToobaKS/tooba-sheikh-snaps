@@ -2,20 +2,3 @@
 @use "./variables" as *;
 @use "./fonts" as *;
 @use "./mixins" as *;
-
-h1{
-    font-family: "Newsreader";
-    @include font(52px, 66px, 300);
-}
-
-h2{
-
-}
-
-h3{
-
-}
-
-p{
-
-}
