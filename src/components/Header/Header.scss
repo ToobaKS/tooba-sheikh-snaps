@@ -4,12 +4,12 @@
 
 .header {
   padding: 24px 16px;
-  background-color: $secondary-color-sage;
+  background-color: $primary-color-pistachio;
   @include display-flex(row, space-between, start);
   position: sticky;
   top: 0px;
   z-index: 1000;
-  
+
   &__wordmark {
     font-family: "Newsreader";
     @include font(32px, 32px, 400);
@@ -22,7 +22,6 @@
     background-color: $secondary-color-white;
     border: solid 2px $primary-color-forest-green;
     border-radius: 50px;
-
     font-family: "Outfit";
     @include font(12px, 0px, 500);
 
@@ -32,13 +31,19 @@
       background-color: $primary-color-forest-green;
       border: solid 2px $primary-color-forest-green;
     }
-  }
 
-  &__filter-image {
-    padding-left: 8px;
+    &__image {
+      padding-left: 8px;
+
+      &--active {
+        filter: brightness(0) invert(1);
+      }
+    }
+
+    &:hover &__image,
+    &--active &__image {
+      filter: brightness(0) invert(1);
+    }
   }
 }
 
-svg{
-  color: $primary-color-forest-green;
-}

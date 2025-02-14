@@ -4,12 +4,10 @@
 
 .photo {
     width: 100%;
-    
     border: 1px solid $secondary-color-sea-green;
     border-radius: 8px;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
   
     &__content {
       position: relative;
