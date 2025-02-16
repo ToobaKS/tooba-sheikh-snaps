@@ -1,0 +1,13 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/fonts" as *;
+
+.filter-container {
+  padding: 16px;
+  background-color: $secondary-color-sage;
+  &__heading {
+    font-family: "Outfit";
+    @include font(18px, 23px, 500);
+    padding-bottom: 8px;
+  }
+}
