@@ -4,6 +4,7 @@
 
 .footer {
   padding: 16px;
+  padding-top: 32px;
   background-color: $primary-color-pistachio;
   @include display-flex(column, center, start);
 
