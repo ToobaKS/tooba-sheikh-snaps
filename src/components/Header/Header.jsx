@@ -1,7 +1,12 @@
 import "./Header.scss";
 import img from "../../assets/images/Filter.svg";
 
-function Header({ toggleFilterContainer, isOpen }) {
+function Header({ setIsOpen, isOpen }) {
+  
+  const toggleFilterContainer = () => {
+    setIsOpen(!isOpen);
+  };
+  
   return (
     <header className="header">
       <h1 className="header__wordmark">Snaps</h1>

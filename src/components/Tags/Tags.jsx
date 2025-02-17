@@ -1,10 +1,10 @@
 import "./Tags.scss";
 
 function Tags({
-  handleFilterPhotos = () => {},
+  handleFilterTags = () => {},
   tags = [],
   isClickable = false,
-  selectedTag = null
+  selectedTag = null,
 }) {
   return (
     <>
@@ -12,8 +12,10 @@ function Tags({
         return (
           <button
             key={index}
-            className={`tag${isClickable ? " tag__clickable" : ""}${isClickable && selectedTag === tag ? " tag__selected" : ""}`}
-            onClick={() => handleFilterPhotos(tag)}
+            className={`tag${isClickable ? " tag__clickable" : ""}${
+              isClickable && selectedTag === tag ? " tag__selected" : ""
+            }`}
+            onClick={() => handleFilterTags(tag)}
           >
             {tag}
           </button>

@@ -1,0 +1,48 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/fonts" as *;
+
+.footer {
+  padding: 16px;
+  background-color: $primary-color-pistachio;
+  @include display-flex(column, center, start);
+
+  font-family: "Outfit";
+  @include font(12px, 15px, 500);
+
+  &__wordmark {
+    font-family: "Newsreader";
+    @include font(32px, 32px, 400);
+    padding: 24px 0px;
+  }
+
+  &__links-sections {
+    padding: 8px 0px;
+  }
+
+  &__links-section {
+    @include display-flex(column, center, start);
+    padding-bottom: 16px;
+  }
+
+  &__link {
+    text-decoration: none;
+    padding-bottom: 8px;
+    color: $primary-color-black;
+  }
+
+  &__social-link {
+    padding-right: 16px;
+  }
+
+  &__bottom {
+    @include display-flex(row, start, center);
+  }
+
+  &__info {
+    @include font(12px, 15px, 500);
+    color: $secondary-color-sea-green;
+    padding-top: 16px;
+    padding-right: 16px;
+  }
+}

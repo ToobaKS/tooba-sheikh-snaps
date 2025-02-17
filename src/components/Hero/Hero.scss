@@ -15,7 +15,8 @@
     }
   }
   &__subheading {
-    padding: 16px 0px;
+    padding-bottom: 16px;
+    padding-top: 8px;
     font-family: "Outfit";
     @include font(12px, 15px, 300);
   }

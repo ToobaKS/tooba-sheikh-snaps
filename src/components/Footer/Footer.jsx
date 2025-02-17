@@ -2,24 +2,37 @@ import facebook from "../../assets/images/facebook.svg";
 import x from "../../assets/images/X_twitter.svg";
 import instagram from "../../assets/images/instagram.svg";
 import pinterest from "../../assets/images/pinterest.svg";
+import "./Footer.scss";
 
 function Footer() {
   return (
     <section className="footer">
       <div className="footer__main">
-        <h1 className="footer__heading">Snaps</h1>
-        <div className="footer__links-section">
-          <p>For photographers</p>
-          <p>Hire Talents</p>
-          <p>Inspirations</p>
+        <h1 className="footer__wordmark">Snaps</h1>
+        <div className="footer__links-sections">
+          <div className="footer__links-section">
+            <a className="footer__link" href="">
+              For photographers
+            </a>
+            <a className="footer__link" href="">
+              Hire Talents
+            </a>
+            <a className="footer__link" href="">
+              Inspirations
+            </a>
+          </div>
+          <div className="footer__links-section">
+            <a className="footer__link" href="">
+              About
+            </a>
+            <a className="footer__link" href="">
+              Careers
+            </a>
+            <a className="footer__link" href="">
+              Support
+            </a>
+          </div>
         </div>
-        <div className="footer__links-section">
-          <p>About</p>
-          <p>Careers</p>
-          <p>Support</p>
-        </div>
-      </div>
-      <div className="footer__bottom">
         <div className="footer__social">
           <a className="footer__social-link" href="https://www.facebook.com/">
             <img
@@ -46,12 +59,12 @@ function Footer() {
             />
           </a>
         </div>
-        <div className="footer__copyright">
-          <p className="footer__info">&copy; 2024 Snaps</p>
-          <p className="footer__info">Terms</p>
-          <p className="footer__info">Privacy</p>
-          <p className="footer__info">Cookies</p>
-        </div>
+      </div>
+      <div className="footer__bottom">
+        <p className="footer__info">&copy; 2024 Snaps</p>
+        <p className="footer__info">. Terms</p>
+        <p className="footer__info">Privacy</p>
+        <p className="footer__info">Cookies</p>
       </div>
     </section>
   );
