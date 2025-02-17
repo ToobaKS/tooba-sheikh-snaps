@@ -18,6 +18,11 @@
       @include font(42px, 70px, 300);
     }
 
+    @include desktop {
+      @include font(52px, 70px, 300);
+      width: 700px;
+    }
+
     &--italics {
       font-style: italic;
     }

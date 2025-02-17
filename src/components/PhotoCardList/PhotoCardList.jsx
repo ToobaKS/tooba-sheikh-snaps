@@ -2,7 +2,7 @@ import "./PhotoCardList.scss";
 import photos from "../../data/photos.json";
 import PhotoCard from "../PhotoCard/PhotoCard";
 
-function PhotoCardList({selectedTag}) {
+function PhotoCardList({selectedTag, isOpen}) {
   
   const filteredPhotos = photos.filter((photo) => {
     if (!selectedTag) {
@@ -22,6 +22,7 @@ function PhotoCardList({selectedTag}) {
             alt={photo.photoDescription}
             photographer={photo.photographer}
             tags={photo.tags}
+            isOpen={isOpen}
           />
         );
       })}

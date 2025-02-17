@@ -10,13 +10,14 @@
   @include display-flex(row, space-between, space-between);
   flex-wrap: wrap;
   gap: 16px;
+  height: inherit;
 
   @include tablet {
     padding: 24px 24px;
     gap: 24px;
   }
 
-  @include desktop{
-    
+  @include desktop {
+    justify-content: start;
   }
 }

@@ -22,7 +22,7 @@ function App() {
         )}
         <div className="page-content__home-page">
           <Hero />
-          <PhotoCardList selectedTag={selectedTag} />
+          <PhotoCardList selectedTag={selectedTag} isOpen={isOpen}/>
         </div>
       </main>
       <Footer />

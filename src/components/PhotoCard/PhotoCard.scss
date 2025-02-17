@@ -19,6 +19,12 @@
     width: calc(33% - 12px);
   }
 
+  &--open{
+    @include desktop {
+      width: calc(50% - 12px);
+    }
+  }
+
   &__content {
     position: relative;
     display: flex;

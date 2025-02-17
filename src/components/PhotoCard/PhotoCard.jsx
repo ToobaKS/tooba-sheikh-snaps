@@ -1,9 +1,9 @@
 import "./PhotoCard.scss";
 import Tags from "../Tags/Tags";
 
-function PhotoCard({ url, alt, photographer, tags }) {
+function PhotoCard({ url, alt, photographer, tags, isOpen }) {
   return (
-    <div className="photo">
+    <div className={`photo ${isOpen ? " photo--open" : ""}`}>
       <div className="photo__content">
         <img className="photo__image" src={url} alt={alt} />
         <h2 className="photo__photographer">{photographer}</h2>
