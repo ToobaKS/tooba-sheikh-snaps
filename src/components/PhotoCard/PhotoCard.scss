@@ -3,7 +3,6 @@
 @use "../../styles/partials/fonts" as *;
 
 .photo {
-  //margin-top: 16px;
   width: 100%;
   background-color: $secondary-color-sage;
   border: 1px solid $secondary-color-sea-green;
@@ -13,7 +12,6 @@
   overflow: hidden;
 
   @include tablet {
-    //margin: 24px 0px;
     width: calc(50% - 12px);
   }
 
@@ -37,11 +35,21 @@
 
     font-family: "Outfit";
     @include font(10px, 12px, 500);
+
+    @include tablet {
+      border-top-left-radius: 12px;
+      @include font(12px, 15px, 500);
+    }
   }
 
   &__tags {
     display: flex;
     padding: 4px;
     padding-left: 8px;
+
+    @include tablet {
+      padding: 8px;
+      padding-left: 16px;
+    }
   }
 }

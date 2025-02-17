@@ -15,7 +15,7 @@
     @include font(26px, 38px, 300);
 
     @include tablet {
-      @include font(52px, 66px, 300);
+      @include font(42px, 70px, 300);
     }
 
     &--italics {

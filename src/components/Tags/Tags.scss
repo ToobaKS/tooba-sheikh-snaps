@@ -16,7 +16,7 @@
   @include tablet {
     padding: 8px 12px;
     border-radius: 8px;
-    @include font(14px, 17.5px, 500);
+    @include font(12px, 12px, 500);
   }
 
   &__clickable {
