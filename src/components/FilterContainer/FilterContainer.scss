@@ -11,6 +11,13 @@
     height: 330px;
   }
 
+  @include desktop{
+    width: 33%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+  }
+
   &__heading {
     font-family: "Outfit";
     @include font(18px, 23px, 500);

@@ -20,12 +20,14 @@ function App() {
             selectedTag={selectedTag}
           />
         )}
-        <Hero />
-        <PhotoCardList selectedTag={selectedTag} />
+        <div className="page-content__home-page">
+          <Hero />
+          <PhotoCardList selectedTag={selectedTag} />
+        </div>
       </main>
       <Footer />
     </>
   );
-} 
+}
 
 export default App;

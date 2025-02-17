@@ -24,6 +24,12 @@
       height: 375px;
       padding-top: 16px;
     }
+
+    @include desktop {
+        @include display-flex(row, space-between, space-between);
+        // height: 375px;
+        // padding-top: 16px;
+      }
   }
 
   &__wordmark {
@@ -45,6 +51,10 @@
     @include tablet {
       width: 100%;
       @include display-flex(row, space-between, start);
+    }
+
+    @include desktop{
+        width: 80%;
     }
   }
 
