@@ -8,8 +8,8 @@ function Footer() {
   return (
     <section className="footer">
       <div className="footer__main">
-        <h1 className="footer__wordmark">Snaps</h1>
         <div className="footer__links-sections">
+          <h1 className="footer__wordmark">Snaps</h1>
           <div className="footer__links-section">
             <a className="footer__link" href="">
               For photographers
