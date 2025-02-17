@@ -18,20 +18,21 @@
 
   &__main {
     width: 100%;
-    @include tablet{
-        @include display-flex(column, space-between, space-between);
-        height: 375px;
-        padding-top: 16px;
+    @include tablet {
+      @include display-flex(column, space-between, space-between);
+      height: 375px;
+      padding-top: 16px;
     }
   }
 
   &__wordmark {
     font-family: "Newsreader";
-    @include font(40px, 40px, 400);
+    @include font(32px, 32px, 400);
     padding: 24px 0px;
     padding-bottom: 32px;
 
     @include tablet {
+      @include font(40px, 40px, 400);
       padding: 0px;
       width: 50%;
     }
@@ -55,8 +56,8 @@
     text-decoration: none;
     padding-bottom: 8px;
     color: $primary-color-black;
-    @include tablet{
-        padding-right: 16px;
+    @include tablet {
+      padding-right: 16px;
     }
   }
 
@@ -66,9 +67,9 @@
 
   &__bottom {
     @include display-flex(row, start, center);
-    @include tablet{
-        padding-bottom: 24px;
-        //padding-top: 16px;
+    @include tablet {
+      padding-bottom: 24px;
+      //padding-top: 16px;
     }
   }
 
