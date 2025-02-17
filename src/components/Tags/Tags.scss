@@ -12,11 +12,21 @@
   color: $primary-color-black;
   font-family: "Outfit";
   @include font(10px, 12px, 500);
-  
+
+  @include tablet {
+    padding: 8px 12px;
+    border-radius: 8px;
+    @include font(14px, 17.5px, 500);
+  }
+
   &__clickable {
     border: 1.25px solid $primary-color-forest-green;
     color: $primary-color-forest-green;
     @include font(12px, 15px, 500);
+
+    @include tablet{
+      @include font(14px, 17.5px, 500);
+    }
 
     &:hover {
       border: 1px solid $primary-color-forest-green;
