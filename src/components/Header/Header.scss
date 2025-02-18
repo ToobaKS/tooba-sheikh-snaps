@@ -3,50 +3,49 @@
 @use "../../styles/partials/fonts" as *;
 
 .header {
-  padding: 24px 16px;
+  padding: 1.5rem 1rem;
   background-color: $primary-color-pistachio;
   @include display-flex(row, space-between, start);
   position: sticky;
-  top: 0px;
+  top: 0;
   z-index: 1000;
 
-  @include tablet{
-    padding: 32px 24px;
+  @include tablet {
+    padding: 2rem 1.5rem;
   }
 
   &__wordmark {
     font-family: "Newsreader";
-    @include font(32px, 32px, 400);
+    @include font(2rem, 2rem, 400);
 
     @include tablet {
-      @include font(40px, 40px, 400);
+      @include font(2.5rem, 2.5rem, 400);
     }
   }
 
   &__filter {
-    padding: 8px 16px;
-    padding-top: 6px;
+    padding: 0.5rem 1rem;
     color: $primary-color-forest-green;
     background-color: $secondary-color-white;
-    border: solid 2px $primary-color-forest-green;
-    border-radius: 50px;
+    border: 0.125rem solid $primary-color-forest-green;
+    border-radius: 3.125rem;
     font-family: "Outfit";
-    @include font(12px, 0px, 500);
+    @include font(0.75rem, 0, 500);
 
     @include tablet {
-      padding: 11px 26px;
-      @include font(14px, 0px, 500);
+      padding: 0.6875rem 1.625rem;
+      @include font(0.875rem, 0, 500);
     }
 
     &:hover,
     &--active {
       color: $secondary-color-white;
       background-color: $primary-color-forest-green;
-      border: solid 2px $primary-color-forest-green;
+      border-color: $primary-color-forest-green;
     }
 
     &__image {
-      padding-left: 8px;
+      padding-left: 0.5rem;
 
       &--active {
         filter: brightness(0) invert(1);

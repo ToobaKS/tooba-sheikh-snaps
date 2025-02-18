@@ -4,39 +4,38 @@
 
 .hero {
   background-color: $primary-color-pistachio;
-  padding: 16px;
+  padding: 1rem;
 
-  @include tablet{
-    padding: 24px;
+  @include tablet {
+    padding: 1.5rem;
   }
 
   &__heading {
     font-family: "Newsreader";
-    @include font(26px, 38px, 300);
+    @include font(1.625rem, 2.375rem, 300);
 
     @include tablet {
-      @include font(42px, 70px, 300);
+      @include font(2.625rem, 4.375rem, 300);
     }
 
     @include desktop {
-      @include font(52px, 70px, 300);
-      width: 700px;
+      @include font(3.25rem, 4.375rem, 300);
+      max-width: 43.75rem;
     }
 
     &--italics {
       font-style: italic;
     }
   }
+
   &__subheading {
-    padding-bottom: 16px;
-    padding-top: 8px;
     font-family: "Outfit";
-    @include font(12px, 15px, 300);
+    padding: 0.5rem 0 1rem;
+    @include font(0.75rem, 0.9375rem, 300);
 
     @include tablet {
-      padding-bottom: 32px;
-      padding-top: 16px;
-      @include font(20px, 26px, 300);
+      padding: 1rem 0 2rem;
+      @include font(1.25rem, 1.625rem, 300);
     }
   }
 }
