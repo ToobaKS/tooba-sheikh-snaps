@@ -3,37 +3,33 @@
 @use "../../styles/partials/fonts" as *;
 
 .filter-container {
-  padding: 16px;
+  padding: 1rem;
   background-color: $secondary-color-sage;
 
   @include tablet {
-    padding: 24px;
-    height: 330px;
+    padding: 1.5rem;
+    height: 20.625rem;
   }
 
   @include desktop {
-    padding: 40px;
-    padding-right: 32px;
+    padding: 2.5rem 2rem 2.5rem 2.5rem;
     height: inherit;
     order: 2;
-    min-width: 33%;
-    max-width: 33%;
+    flex: 0 0 30%;
   }
 
   &__heading {
     font-family: "Outfit";
-    @include font(18px, 23px, 500);
-    padding-bottom: 8px;
+    @include font(1.125rem, 1.4375rem, 500);
+    padding-bottom: .5rem;
 
     @include tablet {
-      @include font(24px, 30px, 500);
-      padding-top: 8px;
-      padding-bottom: 32px;
+      @include font(1.5rem, 1.875rem, 500);
+      padding: .5rem 0rem 2rem;
     }
 
     @include desktop {
-      padding-top: 16px;
-      padding-bottom: 40px;
+      padding: 1rem 0rem 2.5rem;
     }
   }
 
