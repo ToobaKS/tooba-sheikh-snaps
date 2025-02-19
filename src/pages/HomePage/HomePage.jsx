@@ -1,6 +1,5 @@
 import "./HomePage.scss";
 import { useState } from "react";
-import { BrowserRouter, Routes, Route, Link, Navigate } from "react-router-dom";
 import FilterContainer from "../../components/FilterContainer/FilterContainer";
 import Hero from "../../components/Hero/Hero";
 import PhotoCardList from "../../components/PhotoCardList/PhotoCardList";
