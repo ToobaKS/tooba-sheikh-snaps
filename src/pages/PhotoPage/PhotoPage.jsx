@@ -28,8 +28,8 @@ function PhotoPage() {
 
   return (
     <main className="photo-page-content">
-      <PhotoDetails photo={photo}/>
-      <Form />
+      <PhotoDetails photo={photo} />
+      <Form id={id} />
       <CommentSection id={id} />
     </main>
   );

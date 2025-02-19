@@ -10,6 +10,10 @@ function CommentSection({ id }) {
     fetchComments();
   }, []);
 
+  useEffect(() => {
+    fetchComments();
+  }, [comments]);
+
   if (!comments) {
     return <div>loading...</div>;
   }
