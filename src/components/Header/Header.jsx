@@ -1,15 +1,17 @@
 import "./Header.scss";
 import img from "../../assets/images/Filter.svg";
+import { Link } from "react-router-dom";
 
 function Header({ setIsOpen, isOpen }) {
-  
   const toggleFilterContainer = () => {
     setIsOpen(!isOpen);
   };
-  
+
   return (
     <header className="header">
-      <h1 className="header__wordmark">Snaps</h1>
+      <Link className="header__wordmark-link" to="/">
+        <h1 className="header__wordmark">Snaps</h1>
+      </Link>
       <button
         onClick={toggleFilterContainer}
         className={`header__filter ${isOpen ? " header__filter--active" : ""}`}

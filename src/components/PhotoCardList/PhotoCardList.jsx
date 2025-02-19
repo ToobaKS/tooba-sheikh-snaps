@@ -23,6 +23,7 @@ function PhotoCardList({selectedTag, isOpen}) {
             photographer={photo.photographer}
             tags={photo.tags}
             isOpen={isOpen}
+            id={photo.id}
           />
         );
       })}

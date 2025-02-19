@@ -14,7 +14,12 @@
     padding: 2rem 1.5rem;
   }
 
+  &__wordmark-link {
+    text-decoration: none;
+  }
+
   &__wordmark {
+    color: $primary-color-black;
     font-family: "Newsreader";
     @include font(2rem, 2rem, 400);
 

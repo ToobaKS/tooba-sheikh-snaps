@@ -1,12 +1,15 @@
 import "./PhotoCard.scss";
 import Tags from "../Tags/Tags";
+import { Link } from "react-router-dom";
 
-function PhotoCard({ url, alt, photographer, tags, isOpen }) {
+function PhotoCard({ url, alt, photographer, tags, id, isOpen }) {
   return (
     <div className={`photo ${isOpen ? " photo--open" : ""}`}>
       <div className="photo__content">
-        <img className="photo__image" src={url} alt={alt} />
-        <h2 className="photo__photographer">{photographer}</h2>
+        <Link to={`/photo/${id}`}>
+          <img className="photo__image" src={url} alt={alt} />
+        </Link>
+         <h2 className="photo__photographer">{photographer}</h2>
       </div>
 
       <div className="photo__tags">

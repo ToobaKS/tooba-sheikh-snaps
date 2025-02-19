@@ -11,14 +11,14 @@ function App() {
 
   return (
     <>
-      <Header setIsOpen={setIsOpen} isOpen={isOpen} />
       <BrowserRouter>
+        <Header setIsOpen={setIsOpen} isOpen={isOpen} />
         <Routes>
-          <Route path="/" element={<HomePage isOpen={isOpen}/>} />
+          <Route path="/" element={<HomePage isOpen={isOpen} />} />
           <Route path="/photo/:id" element={<Photo />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
-      <Footer />
     </>
   );
 }
