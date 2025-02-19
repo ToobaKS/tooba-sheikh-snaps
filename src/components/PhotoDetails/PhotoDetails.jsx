@@ -18,9 +18,13 @@ function PhotoDetails({ photo }) {
             <img className="photo__like-icon" src={icon} alt="like-unfilled" />
             <p className="photo__number-likes">{photo.likes} likes</p>
           </div>
-          <p className="photo__date">{(new Date()).toLocaleDateString(photo.timestamp)}</p>
+          <p className="photo__photographer-name">
+            Photo by {photo.photographer}
+          </p>
         </div>
-        <p className="photo__photographer-name">Photo by  {photo.photographer}</p>
+        <p className="photo__date">
+          {new Date(photo.timestamp).toLocaleDateString(photo.timestamp)}
+        </p>
       </div>
     </div>
   );

@@ -2,7 +2,8 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/fonts" as *;
 
-.page-content{
+.photo-page-content{
     background-color:$primary-color-pistachio;
     padding: 1rem;
+    //padding-bottom: 0rem;
 }

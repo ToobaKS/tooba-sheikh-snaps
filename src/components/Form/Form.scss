@@ -5,42 +5,60 @@
 .form {
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
+  font-family: "Outfit";
 
   &__input-label {
     padding-top: 1rem;
-    padding-bottom: 0.25rem;
+    padding-bottom: 8px;
     color: $primary-color-black;
-    @include font(0.625rem, 1.25rem, 700);
+    @include font(12px, 15px, 500);
   }
 
   &__input {
-    border-radius: 0.25rem;
-    min-height: 2.25rem;
-    padding: 0.75rem;
+    border-radius: 0.5rem;
+    min-height: 30px;
+    padding: 8px;
     border-style: none;
-    border: 0.0625rem solid $primary-color-black;
+    border: 1.5px solid $secondary-color-sea-green;
     color: $primary-color-black;
-    font-family: Nunito Sans;
-    @include font(0.875rem, 1.25rem, 400);
+    font-family: "Outfit";
+    @include font(12px, 15px, 500);
 
     &--large {
-      height: 7.8125rem;
+      height: 70px;
       resize: none;
     }
 
     &:focus {
       outline: none;
-      border: 0.0625rem solid $primary-color-black;
+      border: 1.5px solid $primary-color-forest-green;
     }
 
     &--error {
       outline: none;
-      border: 0.0625rem solid #d22d2d;
+      border: 0.0625rem solid #b10606;
     }
   }
 
-  ::placeholder {
-    color: $primary-color-black;
+  &__submit {
+    margin: 16px 0px;
+    padding: 0.375rem 0.7rem;
+    border-radius: .5rem;
+
+    width: fit-content;
+    align-self: end;
+
+    background-color: $secondary-color-white;
+    border: 0.078rem solid $primary-color-forest-green;
+    color: $primary-color-forest-green;
+
+    font-family: "Outfit";
+    @include font(10px, 12px, 500);
+
+    &:hover {
+      border: 0.0625rem solid $primary-color-forest-green;
+      background-color: $primary-color-forest-green;
+      color: $secondary-color-white;
+    }
   }
 }

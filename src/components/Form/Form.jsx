@@ -3,23 +3,16 @@ import "./Form.scss";
 function Form() {
   return (
     <form id="commentsForm" className="form">
-      <label className="form__input-label">NAME</label>
-      <input
-        id="name-box"
-        className="form__input"
-        name="name"
-        type="text"
-        placeholder="Enter your name"
-      />
-      <label className="form__input-label">COMMENT</label>
+      <label className="form__input-label">Name</label>
+      <input id="name-box" className="form__input" name="name" type="text" />
+      <label className="form__input-label">Comment</label>
       <textarea
         id="comment-box"
         className="form__input form__input--large"
         name="comment"
         type="text"
-        placeholder="Add a new comment"
       ></textarea>
-      <button className="form__submit">COMMENT</button>
+      <button className="form__submit">SUBMIT</button>
     </form>
   );
 }
