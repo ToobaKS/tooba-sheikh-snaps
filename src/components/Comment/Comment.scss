@@ -1,0 +1,23 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/fonts" as *;
+
+.comment {
+  @include display-flex(column, center, space-between);
+  flex-grow: 1;
+  border-top: solid $secondary-color-sea-green 1.5px;
+  padding: 16px 0px;
+
+  font-family: "Outfit";
+
+  &__header {
+    color: $primary-color-forest-green;
+    @include display-flex(row, space-between, center);
+    @include font(10px, 12px, 500);
+    padding-bottom: 16px;
+  }
+
+  &__comment {
+    @include font(12px, 15px, 500);
+  }
+}
