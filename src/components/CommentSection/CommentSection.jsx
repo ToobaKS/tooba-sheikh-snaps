@@ -19,11 +19,8 @@ function CommentSection({ id }) {
       `https://unit-3-project-c5faaab51857.herokuapp.com/photos/${id}/comments?api_key=1c1459ab-a5fe-4f24-a3d6-a9b6f153981e`
     );
     data.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
-    console.log(data);
     setComments(data);
   }
-
-  console.log(comments);
 
   return (
     <section className="comment-section">

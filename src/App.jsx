@@ -8,7 +8,6 @@ import Photo from "./pages/PhotoPage/PhotoPage";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
-
   return (
     <>
       <BrowserRouter>

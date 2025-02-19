@@ -62,4 +62,17 @@
       filter: brightness(0) invert(1);
     }
   }
+
+  &__back-button {
+    background-color: transparent;
+    border: none;
+    color: $primary-color-forest-green;
+
+    font-family: "Outfit";
+    @include font(18px, 23px, 500);
+  }
+
+  &__back-icon {
+    padding-right: 10px;
+  }
 }

@@ -3,7 +3,6 @@ import Tags from "../Tags/Tags";
 import icon from "../../assets/images/Like_Outline.svg";
 
 function PhotoDetails({ photo }) {
-  console.log(photo);
   return (
     <div className="photo">
       <div className="photo__content">
