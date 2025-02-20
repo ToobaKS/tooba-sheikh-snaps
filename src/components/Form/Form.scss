@@ -3,6 +3,7 @@
 @use "../../styles/partials/fonts" as *;
 
 .form {
+  margin-top: 16px;
   display: flex;
   flex-direction: column;
   font-family: "Outfit";

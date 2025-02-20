@@ -14,7 +14,7 @@ function FilterContainer({ setSelectedTag, selectedTag }) {
   };
 
   return (
-    <section  className="filter-container">
+    <section className="filter-container">
       <h2 className="filter-container__heading">Filters</h2>
       <div className="filter-container__tags">
         <Tags
@@ -29,3 +29,7 @@ function FilterContainer({ setSelectedTag, selectedTag }) {
 }
 
 export default FilterContainer;
+
+// {`filter-container ${
+//   isOpen ? " filter-container--open" : "filter-container--closed"
+// }`}

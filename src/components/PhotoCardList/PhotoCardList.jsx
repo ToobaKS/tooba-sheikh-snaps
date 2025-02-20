@@ -25,7 +25,7 @@ function PhotoCardList({ selectedTag, isOpen }) {
 
   async function fetchPhotos() {
     const { data } = await axios.get(
-      "https://unit-3-project-c5faaab51857.herokuapp.com/photos?api_key=1c1459ab-a5fe-4f24-a3d6-a9b6f153981e"
+      "https://unit-3-project-c5faaab51857.herokuapp.com/photos?api_key=139c5912-5d4a-4e27-95df-9103530e2199"
     );
     setPhotos(data);
   }

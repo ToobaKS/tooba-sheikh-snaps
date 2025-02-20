@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function PhotoCard({ url, alt, photographer, tags, id, isOpen }) {
   return (
-    <div className={`photo ${isOpen ? " photo--open" : ""}`}>
+    <div className={`photo ${isOpen ? " photo--open" : "photo--closed"}`}>
       <div className="photo__content">
         <Link to={`/photo/${id}`}>
           <img className="photo__image" src={url} alt={alt} />

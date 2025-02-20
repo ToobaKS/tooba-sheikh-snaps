@@ -3,7 +3,6 @@
 @use "../../styles/partials/fonts" as *;
 
 .photo {
-  margin-bottom: 16px;
   font-family: "Outfit";
   @include font(12px, 15px, 500);
   border-radius: 12px;
@@ -16,7 +15,7 @@
     @include display-flex(row, center, start);
   }
 
-  &__tags{
+  &__tags-unclickable {
     padding: 16px;
     padding-bottom: 14px;
   }
@@ -31,7 +30,7 @@
     padding-bottom: 10px;
   }
 
-  &__like-icon{
+  &__like-icon {
     height: 10px;
     padding-right: 4px;
   }

@@ -47,20 +47,15 @@
       color: $secondary-color-white;
       background-color: $primary-color-forest-green;
       border-color: $primary-color-forest-green;
-    }
 
-    &__image {
-      padding-left: 0.5rem;
-
-      &--active {
+      .header__icon {
         filter: brightness(0) invert(1);
       }
     }
+  }
 
-    &:hover &__image,
-    &--active &__image {
-      filter: brightness(0) invert(1);
-    }
+  &__icon {
+    padding-left: 0.5rem;
   }
 
   &__back-button {

@@ -27,7 +27,7 @@ function Header({ setIsOpen, isOpen }) {
         >
           Filter
           <img
-            className={`header__filter__image ${
+            className={`header__icon ${
               isOpen ? " header__filter-image--active" : ""
             }`}
             src={filter}

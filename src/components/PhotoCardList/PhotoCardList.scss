@@ -9,7 +9,6 @@
   @include display-flex(row, space-between, space-between);
   flex-wrap: wrap;
   gap: 1rem;
-  height: inherit;
 
   @include tablet {
     padding: 1.5rem;
@@ -17,6 +16,7 @@
   }
 
   @include desktop {
+    width: 100%;
     justify-content: start;
   }
 }

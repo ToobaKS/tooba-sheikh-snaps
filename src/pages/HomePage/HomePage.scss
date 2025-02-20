@@ -4,10 +4,16 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/global";
 
+// html, body{
+//   width: 100%;
+  
+// }
+
 .page-content {
+
   @include desktop {
-    width: inherit;
-    height: inherit;
+    background-color: $primary-color-pistachio;
     display: flex;
+    // flex-grow: 1;
   }
 }
