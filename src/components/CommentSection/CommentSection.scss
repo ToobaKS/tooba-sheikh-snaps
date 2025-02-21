@@ -5,9 +5,21 @@
 .comment-section {
   padding-top: 16px;
 
+  @include tablet{
+    padding-bottom: 16px;
+  }
+
+  @include desktop {
+    width: 60%;
+  }
+
   &__heading {
     padding-bottom: 16px;
     font-family: "Outfit";
     @include font(12px, 15px, 500);
+
+    @include tablet {
+      @include font(20px, 26px, 500);
+    }
   }
 }

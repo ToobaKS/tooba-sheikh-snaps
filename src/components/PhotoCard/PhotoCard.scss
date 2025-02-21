@@ -19,13 +19,6 @@
     width: calc(33% - 0.75rem);
   }
 
-
-  // &--closed {
-  //   @include desktop {
-  //     width: calc(33% - 0.75rem);
-  //   }
-  // }
-
   &--open {
     @include desktop {
       width: calc(50% - 0.75rem);

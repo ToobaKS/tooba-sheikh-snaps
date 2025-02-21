@@ -23,24 +23,24 @@ function PhotoDetails({ id }) {
   }
 
   return (
-    <div className="photo">
-      <div className="photo__content">
-        <img className="photo__image" src={photo.photo} alt={photo.alt} />
+    <div className="photo-details">
+      <div className="photo-details__content">
+        <img className="photo-details__image" src={photo.photo} alt={photo.alt} />
       </div>
-      <div className="photo__tags-unclickable">
+      <div className="photo-details__tags-unclickable">
         <Tags tags={photo.tags} isClickable={false} />
       </div>
-      <div className="photo__photo-details">
-        <div className="photo__like-date">
-          <div className="photo__likes">
-            <img className="photo__like-icon" src={icon} alt="like-unfilled" />
-            <p className="photo__number-likes">{photo.likes} likes</p>
+      <div className="photo-details__photo-details">
+        <div className="photo-details__like-date">
+          <div className="photo-details__likes">
+            <img className="photo-details__like-icon" src={icon} alt="like-unfilled" />
+            <p className="photo-details__number-likes">{photo.likes} likes</p>
           </div>
-          <p className="photo__photographer-name">
+          <p className="photo-details__photographer-name">
             Photo by {photo.photographer}
           </p>
         </div>
-        <p className="photo__date">
+        <p className="photo-details__date">
           {new Date(photo.timestamp).toLocaleDateString(photo.timestamp)}
         </p>
       </div>

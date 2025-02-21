@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./Form.scss";
 import axios from "axios";
 
-function Form({ id }) {
+function Form({ id, postComment }) {
   const [name, setName] = useState("");
   const [comment, setComment] = useState("");
 
@@ -22,28 +22,18 @@ function Form({ id }) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(event);
+
+    const com = {
+      name: name,
+      comment: comment,
+    };
+
     if (isFormValid()) {
-      postComment();
+      postComment(com);
     } else {
       alert("eeee");
     }
   };
-
-  async function postComment() {
-    try {
-      const com = {
-        name: name,
-        comment: comment,
-      };
-
-      const request = `https://unit-3-project-c5faaab51857.herokuapp.com/photos/${id}/comments?api_key=139c5912-5d4a-4e27-95df-9103530e2199`;
-      const response = await axios.post(request, com);
-      return response;
-    } catch (error) {
-      console.error(error);
-    }
-  }
 
   return (
     <form id="commentsForm" className="form" onSubmit={handleSubmit}>

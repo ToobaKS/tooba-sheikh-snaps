@@ -2,17 +2,47 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/fonts" as *;
 
-.photo {
+.photo-details {
+  width: 100%;
+  background-color: $secondary-color-sage;
+  border: 0.0625rem solid $secondary-color-sea-green;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
   font-family: "Outfit";
   @include font(12px, 15px, 500);
   border-radius: 12px;
   border-width: 1.5px;
+
+  @include tablet {
+    width: 100%;
+  }
+
+  @include desktop {
+    width: 60%;
+  }
+
+  &__content {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+  }
+
+  &__image {
+    width: 100%;
+  }
 
   &__photo-details {
     padding: 16px;
     padding-top: 0px;
     width: 100%;
     @include display-flex(row, center, start);
+
+    @include tablet {
+      justify-content: space-between;
+      @include font(20px, 26px, 500);
+    }
   }
 
   &__tags-unclickable {
@@ -23,6 +53,11 @@
   &__like-date {
     width: 100%;
     @include display-flex(column, space-between, start);
+
+    @include tablet {
+      @include display-flex(row, space-between, start);
+      width: 60%;
+    }
   }
 
   &__likes {

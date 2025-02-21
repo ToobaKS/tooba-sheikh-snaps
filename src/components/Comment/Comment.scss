@@ -10,14 +10,27 @@
 
   font-family: "Outfit";
 
+  @include tablet {
+    padding: 24px 0px;
+  }
+
   &__header {
     color: $primary-color-forest-green;
     @include display-flex(row, space-between, center);
     @include font(10px, 12px, 500);
     padding-bottom: 16px;
+
+    @include tablet {
+      padding-bottom: 24px;
+      @include font(14px, 15px, 500);
+    }
   }
 
   &__comment {
     @include font(12px, 15px, 500);
+
+    @include tablet {
+      @include font(20px, 26px, 500);
+    }
   }
 }

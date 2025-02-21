@@ -8,14 +8,14 @@ function HomePage({ isOpen }) {
   const [selectedTag, setSelectedTag] = useState(null);
 
   return (
-    <main className="page-content">
+    <main className="home-page">
       {isOpen && (
         <FilterContainer
           setSelectedTag={setSelectedTag}
           selectedTag={selectedTag}
         />
       )}
-      <div className="page-content__home-page">
+      <div className="home-page__content">
         <Hero />
         <PhotoCardList selectedTag={selectedTag} isOpen={isOpen} />
       </div>

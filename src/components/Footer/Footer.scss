@@ -12,6 +12,7 @@
 
   @include tablet {
     padding: 3rem 1.5rem;
+    padding-bottom: 1rem;
     @include font(1.25rem, 1.625rem, 500);
   }
 
@@ -20,11 +21,12 @@
 
     @include tablet {
       @include display-flex(column, space-between, space-between);
-      height: 23.4375rem;
+      height: 18.5rem;
       padding-top: 1rem;
     }
 
     @include desktop {
+      height: 15rem;
       @include display-flex(row, space-between, space-between);
     }
   }

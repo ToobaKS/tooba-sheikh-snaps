@@ -65,9 +65,18 @@
 
     font-family: "Outfit";
     @include font(18px, 23px, 500);
+
+    @include tablet {
+      @include font(24px, 30px, 500);
+    }
   }
 
   &__back-icon {
     padding-right: 10px;
+
+    @include tablet {
+      height: 18px;
+      padding-right: 12px;
+    }
   }
 }
