@@ -11,7 +11,7 @@
 
   @include desktop {
     margin-top: 56px;
-    width: 60%;
+    //width: 60%;
   }
 
   &__input-label {
@@ -26,7 +26,8 @@
     }
   }
 
-  &__input {
+  &__input,
+  &__comment {
     border-radius: 0.5rem;
     min-height: 30px;
     padding: 8px;
@@ -39,6 +40,7 @@
     @include tablet {
       border-radius: 12px;
       padding: 10px;
+      border: 2px solid $secondary-color-sea-green;
       @include font(20px, 26px, 500);
     }
 
@@ -47,14 +49,22 @@
       resize: none;
     }
 
+    &--error {
+      outline: none;
+      border: 1.5px solid #b10606;
+
+      @include tablet {
+        border: 2px solid #b10606;
+      }
+    }
+
     &:focus {
       outline: none;
       border: 1.5px solid $primary-color-forest-green;
-    }
 
-    &--error {
-      outline: none;
-      border: 0.0625rem solid #b10606;
+      @include tablet {
+        border: 2px solid $primary-color-forest-green;
+      }
     }
   }
 
@@ -66,17 +76,18 @@
     width: fit-content;
     align-self: end;
 
-    background-color: $secondary-color-white;
-    border: 0.078rem solid $primary-color-forest-green;
-    color: $primary-color-forest-green;
+    border: 1.5px solid $primary-color-forest-green;
+    background-color: $primary-color-forest-green;
+    color: $secondary-color-white;
 
     font-family: "Outfit";
     @include font(10px, 12px, 500);
 
-    &:hover {
-      border: 0.0625rem solid $primary-color-forest-green;
-      background-color: $primary-color-forest-green;
-      color: $secondary-color-white;
+    @include tablet {
+      margin: 16px 4px;
+      padding: 6px 18px;
+      border-radius: 10px;
+      @include font(14px, 17.5px, 500);
     }
   }
 }

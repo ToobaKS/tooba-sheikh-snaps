@@ -1,10 +1,10 @@
 import { useState } from "react";
 import "./Form.scss";
-import axios from "axios";
 
 function Form({ id, postComment }) {
   const [name, setName] = useState("");
   const [comment, setComment] = useState("");
+  const [error, setError] = useState(false);
 
   const handleChangeName = (event) => {
     setName(event.target.value);
@@ -29,9 +29,14 @@ function Form({ id, postComment }) {
     };
 
     if (isFormValid()) {
-      postComment(com);
+      try {
+        postComment(com);
+        setError(false);
+      } catch (error) {
+        console.log(error);
+      }
     } else {
-      alert("eeee");
+      setError(true);
     }
   };
 
@@ -40,7 +45,7 @@ function Form({ id, postComment }) {
       <label className="form__input-label">Name</label>
       <input
         id="name-box"
-        className="form__input"
+        className={`form__input ${error && !name ? "form__input--error" : ""}`}
         name="name"
         type="text"
         onChange={handleChangeName}
@@ -48,12 +53,14 @@ function Form({ id, postComment }) {
       <label className="form__input-label">Comment</label>
       <textarea
         id="comment-box"
-        className="form__input form__input--large"
+        className={`form__comment form__comment--large ${
+          error && !comment ? "form__comment--error" : ""
+        }`}
         name="comment"
         type="text"
         onChange={handleChangeComment}
       ></textarea>
-      <button className="form__submit">SUBMIT</button>
+      <button className="form__submit">Submit</button>
     </form>
   );
 }

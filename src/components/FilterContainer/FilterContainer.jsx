@@ -47,7 +47,3 @@ function FilterContainer({ setSelectedTag, selectedTag }) {
 }
 
 export default FilterContainer;
-
-// {`filter-container ${
-//   isOpen ? " filter-container--open" : "filter-container--closed"
-// }`}

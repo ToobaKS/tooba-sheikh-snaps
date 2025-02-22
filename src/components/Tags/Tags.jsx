@@ -5,6 +5,7 @@ function Tags({
   tags = [],
   isClickable = false,
   selectedTag = null,
+  isOnPhotoPage = false
 }) {
   return (
     <>
@@ -14,7 +15,7 @@ function Tags({
             key={index}
             className={`tag${isClickable ? " tag__clickable" : ""}${
               isClickable && selectedTag === tag ? " tag__selected" : ""
-            }`}
+            }${isOnPhotoPage ? " tag__photo-page" : ""}`}
             onClick={() => handleFilterTags(tag)}
           >
             {tag}

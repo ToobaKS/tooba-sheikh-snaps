@@ -10,10 +10,6 @@
 
   font-family: "Outfit";
 
-  @include tablet {
-    padding: 24px 0px;
-  }
-
   &__header {
     color: $primary-color-forest-green;
     @include display-flex(row, space-between, center);

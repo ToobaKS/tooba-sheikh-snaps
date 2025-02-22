@@ -83,5 +83,9 @@
     @include font(0.75rem, 0.9375rem, 500);
     color: $secondary-color-sea-green;
     padding: 1rem 1rem 0 0;
+
+    @include tablet{
+      @include font(.875rem, 17.5px, 500);
+    }
   }
 }

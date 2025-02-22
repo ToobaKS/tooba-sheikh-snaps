@@ -3,14 +3,11 @@
 @use "../../styles/partials/fonts" as *;
 
 .comment-section {
+  width: 100%;
   padding-top: 16px;
 
   @include tablet{
     padding-bottom: 16px;
-  }
-
-  @include desktop {
-    width: 60%;
   }
 
   &__heading {

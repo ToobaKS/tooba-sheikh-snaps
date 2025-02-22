@@ -15,7 +15,8 @@
   @include tablet {
     padding: 0.5rem 0.75rem;
     border-radius: 0.5rem;
-    @include font(0.75rem, 0.75rem, 500);
+    border: 1.5px solid $secondary-color-sea-green;
+    @include font(12px, 12px, 500);
   }
 
   &__clickable {
@@ -38,5 +39,16 @@
     border: 0.0625rem solid $primary-color-forest-green;
     background-color: $primary-color-forest-green;
     color: $secondary-color-white;
+  }
+
+  &__photo-page {
+    @include tablet {
+      margin-top: 16px;
+      margin-bottom: 16px;
+      margin-right: 24px;
+      border-radius: 12px;
+      border: 2px solid $secondary-color-sea-green;
+      @include font(20px, 26px, 500);
+    }
   }
 }

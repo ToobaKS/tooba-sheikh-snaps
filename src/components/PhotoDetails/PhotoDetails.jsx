@@ -22,27 +22,44 @@ function PhotoDetails({ id }) {
     return <div>loading...</div>;
   }
 
+  const options = {
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  };
+
+  const formattedDate = new Date(photo.timestamp).toLocaleDateString(
+    "en-US",
+    options
+  );
+
   return (
     <div className="photo-details">
       <div className="photo-details__content">
-        <img className="photo-details__image" src={photo.photo} alt={photo.alt} />
+        <img
+          className="photo-details__image"
+          src={photo.photo}
+          alt={photo.alt}
+        />
       </div>
       <div className="photo-details__tags-unclickable">
-        <Tags tags={photo.tags} isClickable={false} />
+        <Tags tags={photo.tags} isClickable={false} isOnPhotoPage={true} />
       </div>
       <div className="photo-details__photo-details">
         <div className="photo-details__like-date">
           <div className="photo-details__likes">
-            <img className="photo-details__like-icon" src={icon} alt="like-unfilled" />
+            <img
+              className="photo-details__like-icon"
+              src={icon}
+              alt="like-unfilled"
+            />
             <p className="photo-details__number-likes">{photo.likes} likes</p>
           </div>
           <p className="photo-details__photographer-name">
             Photo by {photo.photographer}
           </p>
         </div>
-        <p className="photo-details__date">
-          {new Date(photo.timestamp).toLocaleDateString(photo.timestamp)}
-        </p>
+        <p className="photo-details__date">{formattedDate}</p>
       </div>
     </div>
   );
