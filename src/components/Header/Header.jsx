@@ -5,7 +5,7 @@ import arrow from "../../assets/images/Arrow.svg";
 import { useLocation, Link } from "react-router-dom";
 
 function Header({ setIsOpen, isOpen }) {
-  const location = useLocation(); // React Router's location
+  const location = useLocation();
   const [page, setPage] = useState(location.pathname);
 
   const toggleFilterContainer = () => {

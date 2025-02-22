@@ -3,13 +3,16 @@ import x from "../../assets/images/X_twitter.svg";
 import instagram from "../../assets/images/instagram.svg";
 import pinterest from "../../assets/images/pinterest.svg";
 import "./Footer.scss";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
     <section className="footer">
       <div className="footer__main">
         <div className="footer__links-sections">
-          <h1 className="footer__wordmark">Snaps</h1>
+          <Link className="footer__wordmark-link" to="/">
+            <h1 className="footer__wordmark">Snaps</h1>
+          </Link>
           <div className="footer__links-section">
             <a className="footer__link" href="">
               For photographers
