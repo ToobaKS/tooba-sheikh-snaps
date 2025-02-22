@@ -6,7 +6,6 @@
   padding: 2rem 1rem;
   background-color: $primary-color-pistachio;
   @include display-flex(column, center, start);
-
   font-family: "Outfit";
   @include font(0.75rem, 0.9375rem, 500);
 
@@ -84,8 +83,8 @@
     color: $secondary-color-sea-green;
     padding: 1rem 1rem 0 0;
 
-    @include tablet{
-      @include font(.875rem, 17.5px, 500);
+    @include tablet {
+      @include font(0.875rem, 1.09375rem, 500);
     }
   }
 }

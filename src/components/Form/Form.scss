@@ -3,91 +3,87 @@
 @use "../../styles/partials/fonts" as *;
 
 .form {
-  margin-top: 16px;
+  margin-top: 1rem;
   display: flex;
   flex-direction: column;
   font-family: "Outfit";
   width: 100%;
 
   @include desktop {
-    margin-top: 56px;
-    //width: 60%;
+    margin-top: 3.5rem;
   }
 
   &__input-label {
     padding-top: 1rem;
-    padding-bottom: 8px;
+    padding-bottom: 0.5rem;
     color: $primary-color-black;
-    @include font(12px, 15px, 500);
+    @include font(0.75rem, 0.9375rem, 500);
 
     @include tablet {
-      padding-bottom: 12px;
-      @include font(20px, 26px, 500);
+      padding-bottom: 0.75rem;
+      @include font(1.25rem, 1.625rem, 500);
     }
   }
 
   &__input,
   &__comment {
     border-radius: 0.5rem;
-    min-height: 30px;
-    padding: 8px;
+    min-height: 1.875rem;
+    padding: 0.5rem;
     border-style: none;
-    border: 1.5px solid $secondary-color-sea-green;
+    border: 0.094rem solid $secondary-color-sea-green;
     color: $primary-color-black;
     font-family: "Outfit";
-    @include font(12px, 15px, 500);
+    @include font(0.75rem, 0.9375rem, 500);
 
     @include tablet {
-      border-radius: 12px;
-      padding: 10px;
-      border: 2px solid $secondary-color-sea-green;
-      @include font(20px, 26px, 500);
+      border-radius: 0.75rem;
+      padding: 0.625rem;
+      border: 0.125rem solid $secondary-color-sea-green;
+      @include font(1.25rem, 1.625rem, 500);
     }
 
     &--large {
-      height: 100px;
+      height: 6.25rem;
       resize: none;
     }
 
     &--error {
       outline: none;
-      border: 1.5px solid #b10606;
+      border: 0.094rem solid #b10606;
 
       @include tablet {
-        border: 2px solid #b10606;
+        border: 0.125rem solid #b10606;
       }
     }
 
     &:focus {
       outline: none;
-      border: 1.5px solid $primary-color-forest-green;
+      border: 0.094rem solid $primary-color-forest-green;
 
       @include tablet {
-        border: 2px solid $primary-color-forest-green;
+        border: 0.125rem solid $primary-color-forest-green;
       }
     }
   }
 
   &__submit {
-    margin: 16px 0px;
+    margin: 1rem 0;
     padding: 0.375rem 0.7rem;
     border-radius: 0.5rem;
-
     width: fit-content;
     align-self: end;
-
-    border: 1.5px solid $primary-color-forest-green;
+    border: 0.094rem solid $primary-color-forest-green;
     background-color: $primary-color-forest-green;
     color: $secondary-color-white;
-
     font-family: "Outfit";
-    @include font(10px, 12px, 500);
+    @include font(0.625rem, 0.75rem, 500);
 
     @include tablet {
-      margin: 16px 4px;
-      padding: 6px 18px;
-      border-radius: 10px;
-      @include font(14px, 17.5px, 500);
+      margin: 1rem 0.25rem;
+      padding: 0.375rem 1.125rem;
+      border-radius: 0.625rem;
+      @include font(0.875rem, 1.09375rem, 500);
     }
   }
 }
