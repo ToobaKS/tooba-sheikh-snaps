@@ -4,19 +4,19 @@
 
 .comment-section {
   width: 100%;
-  padding-top: 16px;
+  padding-top: 1rem;
 
-  @include tablet{
-    padding-bottom: 16px;
+  @include tablet {
+    padding-bottom: 1rem;
   }
 
   &__heading {
-    padding-bottom: 16px;
+    padding-bottom: 1rem;
     font-family: "Outfit";
-    @include font(12px, 15px, 500);
+    @include font(0.75rem, 0.938rem, 500);
 
     @include tablet {
-      @include font(20px, 26px, 500);
+      @include font(1.25rem, 1.625rem, 500);
     }
   }
 }

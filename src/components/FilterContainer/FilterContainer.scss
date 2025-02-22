@@ -22,15 +22,15 @@
   &__heading {
     font-family: "Outfit";
     @include font(1.125rem, 1.4375rem, 500);
-    padding-bottom: .5rem;
+    padding-bottom: 0.5rem;
 
     @include tablet {
       @include font(1.5rem, 1.875rem, 500);
-      padding: .5rem 0rem 2rem;
+      padding: 0.5rem 0 2rem;
     }
 
     @include desktop {
-      padding: 1rem 0rem 2.5rem;
+      padding: 1rem 0 2.5rem;
     }
   }
 
@@ -38,12 +38,4 @@
     @include display-flex(row, start, start);
     flex-wrap: wrap;
   }
-
-  // &--open{
-  //   display: block;
-  // }
-
-  // &--closed{
-  //   display: none;
-  // }
 }

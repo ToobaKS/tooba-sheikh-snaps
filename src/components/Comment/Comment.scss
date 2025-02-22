@@ -5,28 +5,27 @@
 .comment {
   @include display-flex(column, center, space-between);
   flex-grow: 1;
-  border-top: solid $secondary-color-sea-green 1.5px;
-  padding: 16px 0px;
-
+  border-top: solid $secondary-color-sea-green 0.094rem;
+  padding: 1rem 0;
   font-family: "Outfit";
 
   &__header {
     color: $primary-color-forest-green;
     @include display-flex(row, space-between, center);
-    @include font(10px, 12px, 500);
-    padding-bottom: 16px;
+    @include font(0.625rem, 0.75rem, 500);
+    padding-bottom: 1rem;
 
     @include tablet {
-      padding-bottom: 24px;
-      @include font(14px, 15px, 500);
+      padding-bottom: 1.5rem;
+      @include font(0.875rem, 0.938rem, 500);
     }
   }
 
   &__comment {
-    @include font(12px, 15px, 500);
+    @include font(0.75rem, 0.938rem, 500);
 
     @include tablet {
-      @include font(20px, 26px, 500);
+      @include font(1.25rem, 1.625rem, 500);
     }
   }
 }
