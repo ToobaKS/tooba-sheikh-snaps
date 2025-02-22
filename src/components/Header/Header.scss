@@ -62,21 +62,20 @@
     background-color: transparent;
     border: none;
     color: $primary-color-forest-green;
-
     font-family: "Outfit";
-    @include font(18px, 23px, 500);
+    @include font(1.125rem, 1.4375rem, 500);
 
     @include tablet {
-      @include font(24px, 30px, 500);
+      @include font(1.5rem, 1.875rem, 500);
     }
   }
 
   &__back-icon {
-    padding-right: 10px;
+    padding-right: 0.625rem;
 
     @include tablet {
-      height: 18px;
-      padding-right: 12px;
+      height: 1.125rem;
+      padding-right: 0.75rem;
     }
   }
 }

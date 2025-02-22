@@ -11,18 +11,14 @@
   flex-direction: column;
   overflow: hidden;
   font-family: "Outfit";
-  @include font(12px, 15px, 500);
-  border-radius: 12px;
-  border-width: 1.5px;
+  @include font(0.75rem, 0.9375rem, 500);
+  border-radius: 0.75rem;
+  border-width: 0.094rem;
 
   @include tablet {
-    border: 2px solid $secondary-color-sea-green;
+    border: 0.125rem solid $secondary-color-sea-green;
     width: 100%;
   }
-
-  // @include desktop {
-  //   width: 60%;
-  // }
 
   &__content {
     position: relative;
@@ -35,28 +31,27 @@
   }
 
   &__photo-details {
-    padding: 16px;
-    padding-top: 0px;
+    padding: 1rem;
+    padding-top: 0;
     width: 100%;
     @include display-flex(row, center, start);
 
     @include tablet {
-      padding-left: 32px; 
-      padding-right: 32px;
+      padding-left: 2rem;
+      padding-right: 2rem;
       justify-content: space-between;
-      @include font(20px, 26px, 500);
+      @include font(1.25rem, 1.625rem, 500);
     }
   }
 
   &__tags-unclickable {
-    padding: 16px;
-    padding-bottom: 14px;
-    
-    @include tablet{
-      padding-left: 32px; 
-      padding-right: 32px;
+    padding: 1rem;
+    padding-bottom: 0.875rem;
+
+    @include tablet {
+      padding-left: 2rem;
+      padding-right: 2rem;
     }
-  
   }
 
   &__like-date {
@@ -72,7 +67,7 @@
 
   &__likes {
     @include display-flex(row, start, center);
-    padding-bottom: 10px;
+    padding-bottom: 0.625rem;
 
     @include tablet {
       width: 40%;
@@ -86,12 +81,12 @@
   }
 
   &__like-icon {
-    height: 10px;
-    padding-right: 4px;
+    height: 0.625rem;
+    padding-right: 0.25rem;
 
     @include tablet {
-      height: 14px;
-      padding-right: 8px;
+      height: 0.875rem;
+      padding-right: 0.5rem;
     }
   }
 }

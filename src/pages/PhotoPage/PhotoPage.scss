@@ -10,11 +10,11 @@ body{
 .photo-page-content{
     background-color:$primary-color-pistachio;
     padding: 1rem;
-    padding-bottom: 0px;
+    padding-bottom: 0rem;
 
     @include tablet{
-        padding: 24px;
-        padding-bottom: 0px;
+        padding: 1.5rem;
+        padding-bottom: 0rem;
     }
 
     @include desktop{
