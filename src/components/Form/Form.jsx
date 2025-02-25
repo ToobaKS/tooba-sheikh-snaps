@@ -14,7 +14,7 @@ function Form({ id, postComment }) {
   };
 
   const isFormValid = () => {
-    if (!name || !comment) {
+    if (!name.trim() || !comment.trim()) {
       return false;
     }
     return true;
@@ -45,7 +45,7 @@ function Form({ id, postComment }) {
       <label className="form__input-label">Name</label>
       <input
         id="name-box"
-        className={`form__input ${error && !name ? "form__input--error" : ""}`}
+        className={`form__input ${error && !name.trim() ? "form__input--error" : ""}`}
         name="name"
         type="text"
         onChange={handleChangeName}
@@ -54,7 +54,7 @@ function Form({ id, postComment }) {
       <textarea
         id="comment-box"
         className={`form__comment form__comment--large ${
-          error && !comment ? "form__comment--error" : ""
+          error && !comment.trim() ? "form__comment--error" : ""
         }`}
         name="comment"
         type="text"
