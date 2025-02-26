@@ -21,7 +21,7 @@ function PhotoPage() {
 
   async function postComment(com) {
     try {
-      const request = `https://unit-3-project-c5faaab51857.herokuapp.com/photos/${id}/comments?api_key=139c5912-5d4a-4e27-95df-9103530e2199`;
+      const request = `${URL}/photos/${id}/comments`;
       await axios.post(request, com);
       fetchComments();
     } catch (error) {
