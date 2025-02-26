@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./Form.scss";
 
-function Form({ id, postComment }) {
+function Form({ postComment }) {
   const [name, setName] = useState("");
   const [comment, setComment] = useState("");
   const [error, setError] = useState(false);
