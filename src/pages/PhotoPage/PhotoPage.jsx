@@ -10,10 +10,11 @@ function PhotoPage() {
   const { id } = useParams();
   const [comments, setComments] = useState("");
 
+  const URL = "http://localhost:8080";
+
   async function fetchComments() {
-    const { data } = await axios.get(
-      `https://unit-3-project-c5faaab51857.herokuapp.com/photos/${id}/comments?api_key=139c5912-5d4a-4e27-95df-9103530e2199`
-    );
+    const {data}  = await axios.get(`${URL}/photos/${id}/comments`);
+    console.log(data);
     data.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
     setComments(data);
   }

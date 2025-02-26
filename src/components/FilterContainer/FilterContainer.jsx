@@ -8,7 +8,7 @@ function FilterContainer({ setSelectedTag, selectedTag }) {
 
   async function fetchTags() {
     const { data } = await axios.get(
-      "https://unit-3-project-c5faaab51857.herokuapp.com/tags?api_key=139c5912-5d4a-4e27-95df-9103530e2199"
+      "http://localhost:8080/tags"
     );
     setTags(data);
   }

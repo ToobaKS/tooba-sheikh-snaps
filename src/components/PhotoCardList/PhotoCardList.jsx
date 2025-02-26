@@ -23,10 +23,10 @@ function PhotoCardList({ selectedTag, isOpen }) {
     }
   }, [photos, selectedTag]);
 
+  const URL = "http://localhost:8080";
+
   async function fetchPhotos() {
-    const { data } = await axios.get(
-      "https://unit-3-project-c5faaab51857.herokuapp.com/photos?api_key=139c5912-5d4a-4e27-95df-9103530e2199"
-    );
+    const { data } = await axios.get(`${URL}/photos`);
     setPhotos(data);
   }
 
