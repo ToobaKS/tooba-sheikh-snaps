@@ -8,7 +8,7 @@ function FilterContainer({ setSelectedTag, selectedTag }) {
 
   async function fetchTags() {
     const { data } = await axios.get(
-      "http://localhost:8080/tags"
+      "http://localhost:8081/tags"
     );
     setTags(data);
   }

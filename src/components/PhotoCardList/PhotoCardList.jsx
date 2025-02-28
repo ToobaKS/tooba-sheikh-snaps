@@ -23,11 +23,15 @@ function PhotoCardList({ selectedTag, isOpen }) {
     }
   }, [photos, selectedTag]);
 
-  const URL = "http://localhost:8080";
+  const URL = "http://localhost:8081";
 
   async function fetchPhotos() {
-    const { data } = await axios.get(`${URL}/photos`);
-    setPhotos(data);
+    try {
+      const { data } = await axios.get(`${URL}/photos`);
+      setPhotos(data);
+    } catch (error) {
+      console.error("Error fetching photos:", error);
+    }
   }
 
   if (!filteredPhotos) {

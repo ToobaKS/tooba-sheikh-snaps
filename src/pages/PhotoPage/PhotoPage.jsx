@@ -10,13 +10,17 @@ function PhotoPage() {
   const { id } = useParams();
   const [comments, setComments] = useState("");
 
-  const URL = "http://localhost:8080";
+  const URL = "http://localhost:8081";
 
   async function fetchComments() {
-    const {data}  = await axios.get(`${URL}/photos/${id}/comments`);
-    console.log(data);
-    data.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
-    setComments(data);
+    try {
+      const { data } = await axios.get(`${URL}/photos/${id}/comments`);
+      data.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+      setComments(data);
+    } catch (error) {
+      console.error("Error fetching comments:", error);
+      setComments([]);
+    }
   }
 
   async function postComment(com) {
@@ -25,7 +29,7 @@ function PhotoPage() {
       await axios.post(request, com);
       fetchComments();
     } catch (error) {
-      console.error(error);
+      console.error("Error posting comment:", error);
     }
   }
 
