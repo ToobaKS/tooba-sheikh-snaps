@@ -7,10 +7,13 @@ function FilterContainer({ setSelectedTag, selectedTag }) {
   const [tags, setTags] = useState("");
 
   async function fetchTags() {
-    const { data } = await axios.get(
-      "https://unit-3-project-c5faaab51857.herokuapp.com/tags?api_key=139c5912-5d4a-4e27-95df-9103530e2199"
-    );
-    setTags(data);
+    try {
+      const response = await axios.get(`${import.meta.env.VITE_BASE_URL}/tags`);
+      setTags(response.data);
+    } catch (error) {
+      console.error("Error fetching tags:", error);
+      setTags([]);
+    }
   }
 
   useEffect(() => {

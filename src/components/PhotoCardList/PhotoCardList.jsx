@@ -24,10 +24,12 @@ function PhotoCardList({ selectedTag, isOpen }) {
   }, [photos, selectedTag]);
 
   async function fetchPhotos() {
-    const { data } = await axios.get(
-      "https://unit-3-project-c5faaab51857.herokuapp.com/photos?api_key=139c5912-5d4a-4e27-95df-9103530e2199"
-    );
-    setPhotos(data);
+    try {
+      const { data } = await axios.get(`${import.meta.env.VITE_BASE_URL}/photos`);
+      setPhotos(data);
+    } catch (error) {
+      console.error("Error fetching photos:", error);
+    }
   }
 
   if (!filteredPhotos) {

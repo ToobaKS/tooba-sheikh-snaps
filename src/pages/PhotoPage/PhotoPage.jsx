@@ -11,20 +11,23 @@ function PhotoPage() {
   const [comments, setComments] = useState("");
 
   async function fetchComments() {
-    const { data } = await axios.get(
-      `https://unit-3-project-c5faaab51857.herokuapp.com/photos/${id}/comments?api_key=139c5912-5d4a-4e27-95df-9103530e2199`
-    );
-    data.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
-    setComments(data);
+    try {
+      const { data } = await axios.get(`${import.meta.env.VITE_BASE_URL}/photos/${id}/comments`);
+      data.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+      setComments(data);
+    } catch (error) {
+      console.error("Error fetching comments:", error);
+      setComments([]);
+    }
   }
 
   async function postComment(com) {
     try {
-      const request = `https://unit-3-project-c5faaab51857.herokuapp.com/photos/${id}/comments?api_key=139c5912-5d4a-4e27-95df-9103530e2199`;
+      const request = `${import.meta.env.VITE_BASE_URL}/photos/${id}/comments`;
       await axios.post(request, com);
       fetchComments();
     } catch (error) {
-      console.error(error);
+      console.error("Error posting comment:", error);
     }
   }
 
