@@ -1,6 +1,7 @@
 import "./PhotoDetails.scss";
 import Tags from "../Tags/Tags";
 import icon from "../../assets/images/Like_Outline.svg";
+import { formatDate } from "../../util/formatDate";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
@@ -12,26 +13,22 @@ function PhotoDetails({ id }) {
   }, []);
 
   async function fetchPhoto() {
-    const { data } = await axios.get(
-      `https://unit-3-project-c5faaab51857.herokuapp.com/photos/${id}?api_key=139c5912-5d4a-4e27-95df-9103530e2199`
-    );
-    setPhoto(data);
+    try {
+      const { data } = await axios.get(
+        `${import.meta.env.VITE_BASE_URL}/photos/${id}`
+      );
+
+      setPhoto(data);
+    } catch (error) {
+      console.error("Error fetching photo:", error);
+    }
   }
 
   if (!photo) {
     return <div>loading...</div>;
   }
 
-  const options = {
-    year: "numeric",
-    month: "2-digit",
-    day: "2-digit",
-  };
-
-  const formattedDate = new Date(photo.timestamp).toLocaleDateString(
-    "en-US",
-    options
-  );
+  const formattedDate = formatDate(photo.timestamp);
 
   return (
     <div className="photo-details">

@@ -10,11 +10,9 @@ function PhotoPage() {
   const { id } = useParams();
   const [comments, setComments] = useState("");
 
-  const URL = "http://localhost:8081";
-
   async function fetchComments() {
     try {
-      const { data } = await axios.get(`${URL}/photos/${id}/comments`);
+      const { data } = await axios.get(`${import.meta.env.VITE_BASE_URL}/photos/${id}/comments`);
       data.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
       setComments(data);
     } catch (error) {

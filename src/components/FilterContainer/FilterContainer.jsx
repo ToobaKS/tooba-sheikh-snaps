@@ -7,10 +7,13 @@ function FilterContainer({ setSelectedTag, selectedTag }) {
   const [tags, setTags] = useState("");
 
   async function fetchTags() {
-    const { data } = await axios.get(
-      "http://localhost:8081/tags"
-    );
-    setTags(data);
+    try {
+      const response = await axios.get(`${import.meta.env.VITE_BASE_URL}/tags`);
+      setTags(response.data);
+    } catch (error) {
+      console.error("Error fetching tags:", error);
+      setTags([]);
+    }
   }
 
   useEffect(() => {
