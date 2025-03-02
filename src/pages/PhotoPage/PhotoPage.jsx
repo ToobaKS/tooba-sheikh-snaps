@@ -23,7 +23,7 @@ function PhotoPage() {
 
   async function postComment(com) {
     try {
-      const request = `${URL}/photos/${id}/comments`;
+      const request = `${import.meta.env.VITE_BASE_URL}/photos/${id}/comments`;
       await axios.post(request, com);
       fetchComments();
     } catch (error) {
